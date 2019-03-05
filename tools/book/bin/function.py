@@ -3,6 +3,18 @@
 import os
 
 
+""" 获取处理历史 """
+def get_history(file:str, history:set):
+	with open(file, 'r', encoding='utf8') as fr:
+		basePath = '/'.join(file.split('/')[:-2])
+		for line in fr.readlines():
+			line = line.strip()
+			if '' == line:
+				continue
+			history.add(basePath + '/' + line)
+	return history
+
+
 """ 获取文件夹 """
 def get_dir_list(dir:str, dirs:list):
 	for i in os.listdir(dir):

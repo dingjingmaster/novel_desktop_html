@@ -3,6 +3,7 @@
 import sys
 sys.path.append('.')
 
+from function import get_history
 from function import get_dir_list
 from function import get_book_list
 
@@ -11,11 +12,11 @@ if __name__ == '__main__':
 	resourcePath = workDirPath + '/resource'
 	resultPath = workDirPath + '/result'
 	historyPath = workDirPath + '/bin/history.txt'
-	
-	dirlist = []
-	
-	get_dir_list(resourcePath, dirlist)
-	
-	print(dirlist)
+
+	history = set()                                         # 已处理的文件
+	dirlist = []                                            # 要处理的文件
+
+	get_history(historyPath, history)                       # 获取历史书籍
+	get_dir_list(resourcePath, dirlist)                     # 获取待处理的文件夹
 	
 	exit(0)
