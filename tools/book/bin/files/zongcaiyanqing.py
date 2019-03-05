@@ -45,50 +45,47 @@ class ZongcaiYanqing(DetailBase):
 						lines.append(line)
 			except BaseException as e:
 				print(book + '   ' + e.__str__())
-			# for l in lines:
-				# print(l)
-			return
-			
-			
-			
-			
-			
-			""" 描述 """
-			'''
-			""" 检测描述信息及章节信息 """
+
+			""" 描述 + 章节内容 """
 			descFlag = True
 			thisChapter = ''
+			chapterSource = ''
+			thisChapterTmp = ''
 			chapterNum = ''
 			for l in lines:
-				if l == lines[0]:
-					continue
 				for tr in self.chapterKeyWord:
 					tpl = tr.search(l)
 					if '' != tpl and tpl is not None:
 						descFlag = False
 						thisChapter = tpl.group()
+						chapterSource = thisChapter
+						thisChapterTmp = thisChapter
 						chapterNum = thisChapter
 						chapterNum = re.sub('[第章]', '', chapterNum)
 						chapterNum = str(ci.chinese_to_arabic(chapterNum))
-						if chapterNum != '0':
-							thisChapter = '第' + chapterNum + '章'
+						if '0' != chapterNum:
+							thisChapterTmp = '第' + chapterNum + '章'
 						if thisChapter in chapter:
-							raise Exception(name + '\t' + author + '\t' + l)
+							print(name + '\t' + author + '\t' + thisChapter + '\t' + '可能错误!!!')
+							continue
+						else:
+							thisChapter = thisChapterTmp
 						chapter[thisChapter] = ''
 				if '' != thisChapter:
+					l = l.replace(chapterSource, thisChapter + '\n')
 					chapter[thisChapter] += l + '\n'
 				if descFlag and len(chapter) == 0:
 					desc += l
-			self.saveBook(name, author, category,  desc, chapter)
-		
-		'''
+			self.saveBook(name, author, category, desc, chapter)
 
 	__bookList = []
 	chapterKeyWord = [
 		re.compile('第.?\\S+.?章'),
-		re.compile('楔子')
+		re.compile('楔子'),
+		re.compile('^序'),
 	]
 	deleteKeyWord = [
 		re.compile('\\s?', re.U),
+		re.compile('☆\\S+☆', re.U),
 	]
 

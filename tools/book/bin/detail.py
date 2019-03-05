@@ -21,6 +21,6 @@ if __name__ == '__main__':
 	get_dir_list(resourcePath, dirlist)                     # 获取待处理的文件夹
 
 	start_detail(history, dirlist, resultPath)              # 开始处理
-	save_history(history, historyPath)
+	# save_history(history, historyPath)
 
 	exit(0)
