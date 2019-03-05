@@ -80,8 +80,8 @@ class ZongcaiYanqing(DetailBase):
 
 	__bookList = []
 	chapterKeyWord = [
-		re.compile('第.?\\S+.?章'),
-		re.compile('楔子'),
+		re.compile('^第.?\\S+.?章'),
+		re.compile('^楔子'),
 		re.compile('^序'),
 	]
 	deleteKeyWord = [
