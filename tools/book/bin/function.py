@@ -9,12 +9,11 @@ from book_detail import BookDetailFactory
 """ 获取处理历史 """
 def get_history(file:str, history:set):
 	with open(file, 'r', encoding='utf8') as fr:
-		basePath = '/'.join(file.split('/')[:-2])
 		for line in fr.readlines():
 			line = line.strip()
 			if '' == line:
 				continue
-			history.add(basePath + '/' + line)
+			history.add(line)
 	return history
 
 
@@ -45,6 +44,7 @@ def get_dir_info(dir:str)->[str,str]:
 def save_history(histroy:set, savePath:str):
 	with open(savePath, 'w', encoding='utf8') as fw:
 		for line in histroy:
+			print(line)
 			fw.write(line + '\n')
 	return
 

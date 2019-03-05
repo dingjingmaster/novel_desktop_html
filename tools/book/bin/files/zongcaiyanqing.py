@@ -11,17 +11,29 @@ from character_trans_int import CharacterTransInt
 
 
 """ 黑道分类书籍 """
-class HeiDao(DetailBase):
+class ZongcaiYanqing(DetailBase):
 	def run(self):
 		ci = CharacterTransInt()
 		get_book_list(self.dir, self.__bookList)
 		for book in self.__bookList:
+			lines = []
 			name, author, category, desc, chapter \
 				= '', '', '', '', {}
-			""" 检测书名 """
-			name = get_book_name(book)
-			category = '黑道'
-			lines = []
+			""" 检测作者名 + 书名 """
+			nameAuthor = get_book_name(book)
+			arr = nameAuthor.split(' ')
+			if len(arr) != 2:
+				continue
+			name = arr[1]
+			author = arr[0]
+			
+			""" 删除内容 """
+			self.deleteKeyWord.append(author + '《' + name + '》')
+			
+			""" 分类名 """
+			category = '总裁言情'
+			
+			""" 读取书籍内容 """
 			try:
 				with open(book, 'r', encoding='gbk', errors='ignore') as fr:
 					for line in fr.readlines():
@@ -33,13 +45,20 @@ class HeiDao(DetailBase):
 						lines.append(line)
 			except BaseException as e:
 				print(book + '   ' + e.__str__())
-			""" 检测作者名 """
-			author = lines[0]
-			author = author.replace(name, '')
-			author = re.sub('[\\(|\\)]', '', author)
+			# for l in lines:
+				# print(l)
+			return
+			
+			
+			
+			
+			
+			""" 描述 """
+			'''
 			""" 检测描述信息及章节信息 """
 			descFlag = True
 			thisChapter = ''
+			chapterNum = ''
 			for l in lines:
 				if l == lines[0]:
 					continue
@@ -61,6 +80,8 @@ class HeiDao(DetailBase):
 				if descFlag and len(chapter) == 0:
 					desc += l
 			self.saveBook(name, author, category,  desc, chapter)
+		
+		'''
 
 	__bookList = []
 	chapterKeyWord = [
@@ -69,15 +90,5 @@ class HeiDao(DetailBase):
 	]
 	deleteKeyWord = [
 		re.compile('\\s?', re.U),
-		re.compile('您下载的文件来自http://asuro.cn/bbs/愛書啰大雜燴由 『猪啊猪啊』 为你制作', re.U),
-		re.compile('<愛書啰大雜燴-TXT论坛>-全力为你提供最新最全的txt文本格式电子书下载', re.U),
-		re.compile('jjwxc', re.U),
-		re.compile('晋江文学城\\S?扫描\\S?校对', re.U),
-		re.compile('小瓶子整理制作', re.U),
-		re.compile('ＸＫＸ', re.U),
-		re.compile('言情小说\\S?武侠小说\\S?古典小说\\S?现代小说\\S?科幻小说\\S?侦探小说\\S?纪实小说\\S?军事小说\\S?外国小说\\S?小说更新列表', re.U),
-		re.compile('\\d?-\\d?潇湘书院版权所有\\S?小说阅读网站', re.U),
-		re.compile('狐狸新娘与黑道少主.第\\S?章\\S+潇湘书院', re.U),
-		re.compile('小说分类导航 ： 原创小说 ｜ 言情小说 ｜ 武侠小说 ｜ 古典小说 ｜ 现代小说 ｜ 科幻小说 ｜ 侦探小说 ｜ 纪实小说 ｜ 军事小说 ｜ 外国小说 ｜ 更新列表', re.U),
 	]
 
