@@ -1,5 +1,12 @@
+# IDE
+.idea/
+
 *.log
 *.pyc
 resource/
 data/
 result/
+
+# web 前端
+node_modules/
+public_html/
