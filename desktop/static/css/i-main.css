@@ -5,11 +5,6 @@
     height: 36px;
     border-bottom: 1px solid #e5e5e5;
     background: #f7f7f7;
-    user-select:none;
-    -ms-user-select:none;
-    -moz-user-select:none;
-    -webkit-user-select:none;
-    /*background: #333333;*/
 }
 
 .top-nav>div {
@@ -51,7 +46,6 @@
 .log-row>div {
     width: 33.33%;
     float: left;
-    /*background-color: #333333;*/
 }
 .log-row>div>a>img {
     height: 90px;
@@ -61,14 +55,12 @@
     width: 100%;
     height: 90px;
     margin: 0 auto;
-    /*background-color: burlywood;*/
 }
 .search-group {
     width: 100%;
     height: 46px;
-    margin: 30px auto auto;
+    margin: 24px auto auto;
     display: inline-block;
-    /*background-color: blueviolet;*/
 }
 .search-group>input {
     width: 300px;
@@ -100,3 +92,112 @@
     background-color: #ed4259;
 }
 
+/* 首页导航 */
+.main-nav-wrapper {
+    height: 40px;
+    z-index: 30;
+    position: relative;
+    background-color: #3e3d43;
+}
+.main-nav-wrapper>div {
+    width: 1200px;
+    height: 40px;
+    margin: 0 auto;
+}
+.main-nav-wrapper>div>ul>li {
+    float: left;
+}
+.main-nav-wrapper>div>ul>li:first-child {
+    width: 216px;
+    height: 40px;
+    position: relative;
+    margin-right: 36px;
+    background-color: #313035;
+}
+.main-cat {
+    margin: 10px 20px;
+    color: #f7f7f7;
+}
+.main-cat>i {
+    width: 26px;
+    height: 20px;
+    margin: 10px auto;
+    color: #f7f7f7;
+    font-size: 18px;
+    /*background-color: #bf2c24;*/
+}
+li.nav-li {
+    width: 120px;
+    height: 36px;
+    line-height: 34px;
+    text-align: center;
+    transition: none;
+}
+li.nav-li>a {
+    margin: 16px auto;
+    color: #f7f7f7;
+}
+li.nav-li:hover {
+    background-color: #252428;
+    border-top: 2px solid #ed4259;
+    border-bottom: 2px solid #252428;
+}
+
+/* 首页 焦点 */
+.main-wrapper {
+    width: 100%;
+}
+.main-wrapper>div {
+    width: 1200px;
+    margin: 0 auto;
+}
+.focus-category {
+    width: 215px;
+    height: 420px;
+    float: left;
+    position: relative;
+    border: 1px solid #e6e6e6;
+    border-top: none;
+    box-sizing: content-box;
+    /*background-color: #1dc9a6;*/
+}
+.focus-category>dd {
+    margin: 6px 0;
+}
+.focus-category dd a cite .info {
+    font: 14px/1 PingFangSC-Regular, '-apple-system', Simsun;
+    white-space: nowrap;
+}
+.focus-category dd a cite .info b, .focus-category dd a cite .info i {
+    display: block;
+    cursor: pointer;
+    text-align: left;
+}
+.focus-category>dl>dd {
+    width: 95px;
+    margin: 16px 6px;
+    float: left;
+    /*background-color: #bf2c24;*/
+}
+.focus-category dd a {
+    color: #333;
+    display: block;
+}
+.focus-category em {
+    margin: 10px;
+    font-size: 24px;
+    float: left;
+}
+.info{
+    width: 42px;
+    margin-top: 8px;
+    float: left;
+}
+.info>i {
+    font-style: normal;
+}
+.info>b {
+    font-size: 12px;
+    font-weight: 400;
+    color: #696969;
+}
