@@ -35,7 +35,7 @@
     overflow: hidden;
     display: block;
     box-sizing: content-box;
-    /*background-color: #333333;*/
+    background-color: #f7f7f7;
 }
 
 .log-row {
@@ -51,7 +51,7 @@
 .log-row>div {
     width: 33.33%;
     float: left;
-    background-color: #333333;
+    /*background-color: #333333;*/
 }
 .log-row>div>a>img {
     height: 90px;
@@ -61,18 +61,42 @@
     width: 100%;
     height: 90px;
     margin: 0 auto;
-    background-color: burlywood;
+    /*background-color: burlywood;*/
 }
 .search-group {
     width: 100%;
-    height: 90px;
-    margin: auto;
-    ba
+    height: 46px;
+    margin: 30px auto auto;
+    display: inline-block;
+    /*background-color: blueviolet;*/
 }
-.search-group>span {
-    /*width: 1%;*/
-    font-size: 0;
+.search-group>input {
+    width: 300px;
+    height: 38px;
+    padding: 0 8px;
+    font-size: 14px;
+    color: #333333;
+    border: #bf2c24 solid 1px;
     display: table-cell;
     position: relative;
     white-space: nowrap;
 }
+.search-group>span {
+    margin-left: -9px;
+}
+.search-group>span button {
+    width: 43px;
+    height: 43px;
+    cursor: pointer;
+}
+.search-group>span>button {
+    color: #fff;
+    border: none;
+    text-align: center;
+    position: relative;
+    background-color: #bf2c24;
+}
+.search-group>span>button:hover {
+    background-color: #ed4259;
+}
+
