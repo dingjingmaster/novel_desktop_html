@@ -4,10 +4,7 @@
 }
 a, a:hover, a:focus { text-decoration: none; }
 :focus { outline: none; }
-.cf { zoom: 1; }
-.cf:after, .cf:before { display: table; content: '';}
 button, button:focus, input[type=text], input[type=text]:focus { outline: none }
-.cf:after { clear: both; }
 ul {
     list-style: none;
 }

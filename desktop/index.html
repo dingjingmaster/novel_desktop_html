@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="static/css/i-main.css">
     <link rel="stylesheet" href="static/css/icon.css">
     <link rel="stylesheet" href="static/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
 </head>
 <body>
 <div id="index">
@@ -54,18 +55,7 @@
                             <cite>
                                 <em class="icomoon-xuanhuan"></em>
                                 <span class="info">
-                                    <i>玄幻</i>
-                                    <b>1231231</b>
-                                </span>
-                            </cite>
-                        </a>
-                    </dd>
-                    <dd>
-                        <a>
-                            <cite>
-                                <em class="icomoon-qihuan"></em>
-                                <span class="info">
-                                    <i>奇幻</i>
+                                    <i>玄幻奇幻</i>
                                     <b>1231231</b>
                                 </span>
                             </cite>
@@ -76,18 +66,7 @@
                             <cite>
                                 <em class="icomoon-wuxia"></em>
                                 <span class="info">
-                                    <i>武侠</i>
-                                    <b>1231231</b>
-                                </span>
-                            </cite>
-                        </a>
-                    </dd>
-                    <dd>
-                        <a>
-                            <cite>
-                                <em class="icomoon-xianxia"></em>
-                                <span class="info">
-                                    <i>仙侠</i>
+                                    <i>武侠仙侠</i>
                                     <b>1231231</b>
                                 </span>
                             </cite>
@@ -98,7 +77,7 @@
                             <cite>
                                 <em class="icomoon-dushi"></em>
                                 <span class="info">
-                                    <i>都市</i>
+                                    <i>都市言情</i>
                                     <b>1231231</b>
                                 </span>
                             </cite>
@@ -107,42 +86,9 @@
                     <dd>
                         <a>
                             <cite>
-                                <em class="icomoon-xianshi"></em>
+                                <em class="icomoon-nvsheng"></em>
                                 <span class="info">
-                                    <i>言情</i>
-                                    <b>1231231</b>
-                                </span>
-                            </cite>
-                        </a>
-                    </dd>
-                    <dd>
-                        <a>
-                            <cite>
-                                <em class="icomoon-junshi"></em>
-                                <span class="info">
-                                    <i>军事</i>
-                                    <b>1231231</b>
-                                </span>
-                            </cite>
-                        </a>
-                    </dd>
-                    <dd>
-                        <a>
-                            <cite>
-                                <em class="icomoon-lishi"></em>
-                                <span class="info">
-                                    <i>历史</i>
-                                    <b>1231231</b>
-                                </span>
-                            </cite>
-                        </a>
-                    </dd>
-                    <dd>
-                        <a>
-                            <cite>
-                                <em class="icomoon-kehuan"></em>
-                                <span class="info">
-                                    <i>科幻</i>
+                                    <i>女频文学</i>
                                     <b>1231231</b>
                                 </span>
                             </cite>
@@ -153,7 +99,40 @@
                             <cite>
                                 <em class="icomoon-lingyi"></em>
                                 <span class="info">
-                                    <i>灵异</i>
+                                    <i>科幻灵异</i>
+                                    <b>1231231</b>
+                                </span>
+                            </cite>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a>
+                            <cite>
+                                <em class="icomoon-xianshi"></em>
+                                <span class="info">
+                                    <i>影视文学</i>
+                                    <b>1231231</b>
+                                </span>
+                            </cite>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a>
+                            <cite>
+                                <em class="icomoon-lishi"></em>
+                                <span class="info">
+                                    <i>历史经典</i>
+                                    <b>1231231</b>
+                                </span>
+                            </cite>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a>
+                            <cite>
+                                <em class="icomoon-qihuan"></em>
+                                <span class="info">
+                                    <i>短篇文学</i>
                                     <b>1231231</b>
                                 </span>
                             </cite>
@@ -161,8 +140,40 @@
                     </dd>
                 </dl>
             </div>
+            <div class="focus-table">
+                <div id="focus-table">
+                    <div class="loading"><img src="static/image/loading.gif" alt="loading..."/></div>
+                    <div class="pic">
+                        <ul>
+                            <li><img src="static/image/mapper01.jpg" alt=""/></li>
+                            <li><img src="static/image/mapper02.jpg" alt=""/></li>
+                            <li><img src="static/image/mapper03.jpg" alt=""/></li>
+                            <li><img src="static/image/mapper04.jpg" alt=""/></li>
+                            <li><img src="static/image/mapper05.jpg" alt=""/></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="focus-notice">
+
+            </div>
+
         </div>
     </div>
 </div>
+
+<script src="static/plugins/myFocus/myfocus-2.0.1.min.js"></script>
+<script type="text/javascript">
+    (function () {
+        myFocus.set({
+            id: 'focus-table',
+            pattern: 'mF_fancy',
+            time: 1,
+            trigger: 'mouseover',
+            delay: 20,
+        });
+    })();
+</script>
 </body>
 </html>

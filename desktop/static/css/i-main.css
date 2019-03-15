@@ -12,7 +12,6 @@
     height: 100%;
     margin: 0 auto;
 }
-
 .top-nav>div>div {
     float: left;
     padding: 9px 7px;
@@ -32,7 +31,6 @@
     box-sizing: content-box;
     background-color: #f7f7f7;
 }
-
 .log-row {
     width: 1200px;
     margin: 0 auto;
@@ -108,7 +106,7 @@
     float: left;
 }
 .main-nav-wrapper>div>ul>li:first-child {
-    width: 216px;
+    width: 222px;
     height: 40px;
     position: relative;
     margin-right: 36px;
@@ -146,23 +144,30 @@ li.nav-li:hover {
 /* 首页 焦点 */
 .main-wrapper {
     width: 100%;
+    zoom: 1;
+    overflow: hidden;
 }
 .main-wrapper>div {
     width: 1200px;
     margin: 0 auto;
+    zoom: 1;
+    overflow: hidden;
+    background-color: #1f93dc;
 }
 .focus-category {
-    width: 215px;
-    height: 420px;
+    width: 220px;
+    height: 280px;
     float: left;
     position: relative;
     border: 1px solid #e6e6e6;
     border-top: none;
     box-sizing: content-box;
-    /*background-color: #1dc9a6;*/
+    background-color: #1dc9a6;
 }
-.focus-category>dd {
-    margin: 6px 0;
+.focus-category>dl>dd {
+    width: 95px;
+    margin: 12px 6px;
+    float: left;
 }
 .focus-category dd a cite .info {
     font: 14px/1 PingFangSC-Regular, '-apple-system', Simsun;
@@ -173,23 +178,17 @@ li.nav-li:hover {
     cursor: pointer;
     text-align: left;
 }
-.focus-category>dl>dd {
-    width: 95px;
-    margin: 16px 6px;
-    float: left;
-    /*background-color: #bf2c24;*/
-}
 .focus-category dd a {
     color: #333;
     display: block;
 }
 .focus-category em {
-    margin: 10px;
+    margin: 8px;
     font-size: 24px;
     float: left;
 }
 .info{
-    width: 42px;
+    width: 40px;
     margin-top: 8px;
     float: left;
 }
@@ -200,4 +199,28 @@ li.nav-li:hover {
     font-size: 12px;
     font-weight: 400;
     color: #696969;
+}
+
+/* 广告 */
+.focus-table {
+    width: 636px;
+    height: 274px;
+    margin: 6px 3px 0 8px;
+    float: left;
+    background-color: dimgrey;
+}
+.loading {
+
+}
+.focus-table #focus-table {
+    width: 100%;
+    height: 273px;
+}
+/* 公告 */
+.focus-notice {
+    width: 320px;
+    height: 274px;
+    margin: 6px 0 0 6px;
+    float: left;
+    background-color: #bf2c24;
 }
