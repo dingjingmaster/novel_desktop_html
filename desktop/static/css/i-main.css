@@ -152,7 +152,6 @@ li.nav-li:hover {
     margin: 0 auto;
     zoom: 1;
     overflow: hidden;
-    background-color: #1f93dc;
 }
 .focus-category {
     width: 220px;
@@ -162,7 +161,6 @@ li.nav-li:hover {
     border: 1px solid #e6e6e6;
     border-top: none;
     box-sizing: content-box;
-    background-color: #1dc9a6;
 }
 .focus-category>dl>dd {
     width: 95px;
@@ -209,8 +207,9 @@ li.nav-li:hover {
     float: left;
     background-color: dimgrey;
 }
-.loading {
-
+.pic>ul>li>img {
+    width: 635px;
+    height: 273px;
 }
 .focus-table #focus-table {
     width: 100%;
@@ -222,5 +221,5 @@ li.nav-li:hover {
     height: 274px;
     margin: 6px 0 0 6px;
     float: left;
-    background-color: #bf2c24;
+    /*background-color: #bf2c24;*/
 }
