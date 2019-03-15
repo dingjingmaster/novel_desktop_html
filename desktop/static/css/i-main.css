@@ -262,6 +262,50 @@ li.nav-li:hover {
 /* 推荐 */
 .main-rec-wrapper{
     width: 100%;
-    height: 10px;
-    background-color: #3e3d43;
+}
+.main-rec-wrapper>div {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 3px 0;
+}
+.main-hot {
+    width: 210px;
+    padding: 6px 6px 0;
+    zoom: 1;
+    float: left;
+    overflow: hidden;
+}
+.main-hot>h3 {
+    padding-bottom: 4px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.main-hot>div {
+    padding: 36px 0 8px;
+    text-align: center;
+}
+.main-hot>div>a>img {
+    width: 80px;
+    height: 120px;
+}
+.h-info {
+    padding: 6px 0 0;
+    position: relative;
+    color: #3e3d43;
+    text-align: center;
+    /*background-color: #6dc8e2;*/
+}
+.h-info>span {
+    /*margin: 16px 1px 0;*/
+    padding: 4px;
+    font-size: 14px;
+    overflow: hidden;
+    border: #bf2c24 1px solid;
+}
+.h-info>p {
+    width: 100%;
+    height: 130px;
+    margin-top: 16px;
+    text-align: left;
+    overflow: hidden;
 }
