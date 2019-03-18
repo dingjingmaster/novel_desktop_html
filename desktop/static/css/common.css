@@ -1,67 +1,9 @@
-*, html, body {
-    margin: 0;
-    padding: 0;
-}
-a, a:hover, a:focus { text-decoration: none; }
+*, html, body {margin: 0;padding: 0;}
+a:visited,a:link,a:active{color: #333333;}
+/*a:hover{color: #ed4259;}*/
+a, a:hover, a:focus { cursor:pointer; text-decoration: none; }
 :focus { outline: none; }
 button, button:focus, input[type=text], input[type=text]:focus { outline: none }
-ul {
-    list-style: none;
-}
-ul>li {
-    cursor: pointer;
-}
+ul {list-style: none;}
+ul>li {cursor: pointer;}
 .no-select { user-select:none; -ms-user-select:none; -moz-user-select:none; -webkit-user-select:none; }
-input[type=text].has-primary {
-    border-color: #1f93dc;
-}
-
-input[type=text].has-primary:focus {
-    border-color: #135783;
-}
-
-input[type=text].has-success {
-    border-color: #1dc9a6;
-}
-
-input[type=text].has-success:focus {
-    border-color: #10705d;
-}
-
-input[type=text].has-info {
-    border-color: #6dc8e2;
-}
-
-input[type=text].has-info:focus {
-    border-color: #27a0c3;
-}
-
-input[type=text].has-warning {
-    border-color: #f9b871;
-}
-
-input[type=text].has-warning:focus {
-    border-color: #f58710;
-}
-
-input[type=text].has-danger {
-    border-color: #ef6c7a;
-}
-
-input[type=text].has-danger:focus {
-    border-color: #de182c;
-}
-
-input[type=radio] {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-appearance: none;
-    height: 15px;
-    width: 15px;
-    margin-top: 0;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
