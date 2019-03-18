@@ -26,6 +26,7 @@
 .log-wrapper {
     width: 100%;
     height: 84px;
+    padding-bottom: 8px;
     overflow: hidden;
     display: block;
     box-sizing: content-box;
@@ -293,7 +294,7 @@ li.nav-li:hover {
     height: 120px;
 }
 .h-info {
-    padding: 6px 0 0;
+    padding: 6px 6px 0;
     position: relative;
     color: #3e3d43;
     text-align: center;
