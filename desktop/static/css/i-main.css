@@ -6,7 +6,6 @@
     height: 36px;
     border-bottom: 1px solid #e5e5e5;
     background: #f7f7f7;
-    display: none;
 }
 .top-nav>div {
     width: 1200px;
@@ -96,7 +95,6 @@
     z-index: 30;
     position: relative;
     background-color: #3e3d43;
-    display: none;
 }
 .main-nav-wrapper>div {
     width: 1200px;
@@ -123,7 +121,6 @@
     margin: 10px auto;
     color: #f7f7f7;
     font-size: 18px;
-    /*background-color: #bf2c24;*/
 }
 li.nav-li {
     width: 120px;
@@ -148,7 +145,6 @@ li.nav-li:hover {
     zoom: 1;
     padding-bottom: 8px;
     overflow: hidden;
-    display: none;
 }
 .main-wrapper>div {
     width: 1200px;
